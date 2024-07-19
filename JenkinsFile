@@ -6,6 +6,6 @@ node {
         sh 'mvn package'
     }
     stage('Archive the Artifacts') {
-        archiveArtifacts artifacts: '/target/*', followSymlinks: false
+        archiveArtifacts artifacts: '/target/*.jar', followSymlinks: false
     }
 }
