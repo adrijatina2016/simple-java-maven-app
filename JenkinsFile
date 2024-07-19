@@ -5,4 +5,7 @@ node {
     stage('Code-Complie') {
         sh 'mvn package'
     }
+    stage('Archive the Artifacts') {
+        archiveArtifacts artifacts: '/target/*', followSymlinks: false
+    }
 }
